@@ -1,0 +1,32 @@
+[
+    {
+        "id": "19012",
+        "desc" : "DMT's Well",
+        "latitude" : 39.6792690,
+        "longitude" : -75.7178890
+    },
+    {
+        "id" : "19013",
+        "desc" : "Steve Job's Well",
+        "latitude" : 37.4348831,
+        "longitude" : -122.1404253
+    },
+    {
+        "id": "19014",
+        "desc" : "Erhan's Well",
+        "latitude" : 36.1627,
+        "longitude" : -86.7816
+    },
+    {
+        "id": "19015",
+        "desc" : "Brad's Well",
+        "latitude" : 39.6673566,
+        "longitude" : -75.7502314
+    },
+    {
+        "id": "19016",
+        "desc" : "Mehul's Well",
+        "latitude" : 43.9368172,
+        "longitude" : -78.8498656
+    }
+]

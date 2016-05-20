@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html ng-app="WellMap">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Well Map</title>
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/bootstrap.css"> 
+
+  <style>
+    .name{
+      color:rgb(106,182,200);
+      font-weight:bold;
+      cursor:pointer;
+    }
+
+    .places{float:left;}
+
+    .places li{
+      list-style:none;
+    }
+
+    #showHide{display:block; margin:2em 0;}
+  </style>
+</head>
+<body ng-controller="WellMapController">
+  <div class="places" >
+  <select id="dropdown" ng-model="orderProp" >
+    <option ng-repeat="wells in wellList" value="{{wells}}">{{wells}}</option>
+  </select>
+  <button id="showHide" ng-click="showAll($event)" >Show all Wells</button> 
+
+    <ul>
+      <li ng-repeat="place in places | filter:orderProp" ng-init="liVisible" ng-hide="liVisible == false">
+        <p class="name" ng-click="select(place)">{{place.name}}</p>
+
+      </li>
+    </ul>
+  </div>
+  <div class="google-map" 
+    center="centerProperty"
+    zoom="zoomProperty" 
+    markers="filteredMarkersProperty"
+    latitude="clickedLatitudeProperty"
+    longitude="clickedLongitudeProperty"
+    mark-click="false"
+    draggable="true"
+    style="height: 500px; width: 700px; float:center; border:2px solid black">
+  </div>
+    
+
+
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false&language=en"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.js"></script>
+<script src="lib/google-maps.js"></script>
+<script src="js/WellMap.js"></script>
+
+<script>
+
+</script>
+
+
+</body>
+</html>
